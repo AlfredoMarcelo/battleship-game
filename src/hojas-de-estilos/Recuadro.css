@@ -1,0 +1,19 @@
+.recuadro.mar {
+    height: 45px;
+    width: 45px;
+    background-color: rgb(234, 234, 231);
+    border: 2px solid rgb(148, 147, 146);
+    cursor: pointer;
+  }
+.recuadro.buque {
+    height: 45px;
+    width: 45px;
+    background-color: rgb(18, 148, 74);
+    border: 2px solid rgb(148, 147, 146);
+    cursor: pointer;
+  }
+
+
+.recuadro.mar:hover {
+    background-color: rgb(216, 210, 19);
+}
