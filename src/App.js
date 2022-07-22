@@ -14,7 +14,6 @@ function App() {
       </div>
       <div className="contenedor-tablas">
           <Tabla />
-          <Tabla />
       </div>
     </div>
   );

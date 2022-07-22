@@ -4,27 +4,30 @@ import Recuadro from './Recuadro';
 
 function Tabla(){
 
-  const [tabla, setTabla] = useState(
+  const tabla =
     [
-      [0, 0, 0, 0, 0, 0, 0, 0, 0, 0],
-      [0, 0, 1, 0, 0, 0, 0, 0, 0, 0],
-      [0, 0, 1, 0, 0, 0, 0, 0, 0, 0],
-      [0, 0, 1, 0, 0, 0, 0, 0, 0, 0],
-      [0, 0, 1, 0, 0, 0, 0, 0, 0, 0],
-      [0, 0, 1, 0, 0, 0, 0, 0, 0, 0],
-      [0, 0, 1, 0, 0, 0, 0, 0, 0, 0],
-      [0, 0, 0, 0, 0, 0, 0, 0, 0, 0],
-      [0, 0, 0, 0, 0, 0, 0, 0, 0, 0],
-      [0, 0, 0, 0, 0, 0, 0, 0, 0, 0]
-    ]
-  );
+      [1, 0, 0, 0, 0, 0, 0, 0, 0, 0],
+      [2, 0, 0, 0, 0, 0, 0, 0, 0, 0],
+      [3, 0, 0, 0, 0, 0, 0, 0, 0, 0],
+      [4, 0, 0, 0, 0, 0, 0, 0, 0, 0],
+      [5, 0, 0, 0, 0, 0, 0, 0, 0, 0],
+      [6, 0, 0, 0, 0, 0, 0, 0, 0, 0],
+      [7, 0, 0, 0, 0, 0, 0, 0, 0, 0],
+      [8, 0, 0, 0, 0, 0, 0, 0, 0, 0],
+      [9, 0, 0, 0, 0, 0, 0, 0, 0, 0],
+      [10, 0, 0, 0, 0, 0, 0, 0, 0, 0]
+    ];
 
-  let buque = [1, 1];
+  const [tablaJugador, setTablaJugador] = useState(tabla)
+  const [tablaCpu, setTablaCpu] = useState(tabla)
+
+  console.log(tablaCpu[0]);
 
   return(
-    <div className='contenedor-recuadros'>
+    <>
+      <div className='contenedor-recuadros'>
       {
-        tabla.map((arreglo, index) => {
+        tablaJugador.map((arreglo, index) => {
           return(
             <>
               {arreglo.map((valorArreglo)=>{
@@ -34,7 +37,24 @@ function Tabla(){
           );
         })
       }
-    </div>
+      
+
+      </div>
+      <div className='contenedor-recuadros'>
+      { 
+        tablaCpu.map((arreglo, index) => {
+          return(
+            <>
+              {arreglo.map((valorArreglo)=>{
+                return <Recuadro valor={valorArreglo}/>
+              })}
+            </>
+          );
+        })
+        
+      }
+      </div>
+    </>
   );
 }
 
