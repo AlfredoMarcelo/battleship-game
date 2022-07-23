@@ -2,9 +2,20 @@ import React, { useState } from 'react';
 import '../hojas-de-estilos/Tabla.css'
 import Recuadro from './Recuadro';
 
-function TablaCpu({tabla}){
+function TablaCpu(){
 
-  const [tableroCpu, setTableroCpu] = useState(tabla)
+  const [tableroCpu, setTableroCpu] = useState([
+    [0, 0, 0, 0, 0, 0, 0, 0, 0, 0],
+    [0, 0, 0, 0, 0, 0, 0, 0, 0, 0],
+    [0, 0, 0, 0, 0, 0, 0, 0, 0, 0],
+    [0, 0, 0, 0, 0, 0, 0, 0, 0, 0],
+    [0, 0, 0, 0, 0, 0, 0, 0, 0, 0],
+    [0, 0, 0, 0, 0, 0, 0, 0, 0, 0],
+    [0, 0, 0, 0, 0, 0, 0, 0, 0, 0],
+    [0, 0, 0, 0, 0, 0, 0, 0, 0, 0],
+    [0, 0, 0, 0, 0, 0, 0, 0, 0, 0],
+    [0, 0, 0, 0, 0, 0, 0, 0, 0, 0]
+  ]);
   
   const obtenerDatoCpu= (index, index2) =>{
     let copiaTablaCpu = [...tableroCpu];

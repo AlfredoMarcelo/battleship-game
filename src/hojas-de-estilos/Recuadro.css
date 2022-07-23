@@ -1,14 +1,30 @@
 .recuadro.mar {
     height: 45px;
     width: 45px;
-    background-color: rgb(234, 234, 231);
+    background-color: rgb(211, 211, 208);
     border: 2px solid rgb(148, 147, 146);
     cursor: pointer;
   }
+.recuadro.danio {
+    height: 45px;
+    width: 45px;
+    background-color: rgb(199, 33, 27);
+    border: 2px solid rgb(148, 147, 146);
+    cursor: pointer;
+  }
+
+.recuadro.fallo {
+    height: 45px;
+    width: 45px;
+    background-color: rgb(56, 106, 187);
+    border: 2px solid rgb(148, 147, 146);
+    cursor: pointer;
+  }
+
 .recuadro.buque {
     height: 45px;
     width: 45px;
-    background-color: rgb(18, 148, 74);
+    background-color: rgb(73, 73, 73);
     border: 2px solid rgb(148, 147, 146);
     cursor: pointer;
   }

@@ -7,7 +7,7 @@ function Recuadro({valor, obtenerDatoCpu, obtenerDatoJugador}){
   return(
     <div 
     onClick={obtenerDatoCpu || obtenerDatoJugador} 
-    className={`recuadro${valor === 0 ? ' mar ': ' buque'}`}>
+    className={`recuadro${valor === 0 ? ' mar ': valor === 3? ' danio': valor === 1 ? ' buque' : ' fallo'}`}>
      {valor}
     </div>
   );

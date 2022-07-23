@@ -2,9 +2,20 @@ import React, { useState } from 'react';
 import '../hojas-de-estilos/Tabla.css'
 import Recuadro from './Recuadro';
 
-function TablaJugador({tabla}){
+function TablaJugador(){
 
-  const [tableroJugador, setTableroJugador] = useState(tabla)
+  const [tableroJugador, setTableroJugador] = useState([
+    [0, 0, 0, 0, 0, 0, 0, 0, 0, 0],
+    [0, 0, 0, 0, 1, 0, 0, 0, 0, 0],
+    [0, 0, 0, 0, 1, 0, 0, 0, 0, 0],
+    [0, 0, 0, 0, 1, 0, 0, 0, 0, 0],
+    [0, 0, 0, 0, 1, 0, 0, 0, 0, 0],
+    [0, 0, 0, 0, 0, 0, 0, 0, 0, 0],
+    [0, 0, 0, 0, 0, 0, 0, 0, 0, 0],
+    [0, 0, 0, 0, 0, 0, 0, 0, 0, 0],
+    [0, 0, 0, 0, 0, 0, 0, 0, 0, 0],
+    [0, 0, 0, 0, 0, 0, 0, 0, 0, 0]
+  ]);
   
   const obtenerDatoJugador = (index, index2) =>{
     let copiaTablaJugador = [...tableroJugador];

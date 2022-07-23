@@ -5,22 +5,6 @@ import buqueLogo from "./imagenes/buque.png";
 
 function App() {
 
-  
-  let tabla =
-    [
-      [0, 0, 0, 0, 0, 0, 0, 0, 0, 0],
-      [0, 0, 0, 0, 0, 0, 0, 0, 0, 0],
-      [0, 0, 0, 0, 0, 0, 0, 0, 0, 0],
-      [0, 0, 0, 0, 0, 0, 0, 0, 0, 0],
-      [0, 0, 0, 0, 0, 0, 0, 0, 0, 0],
-      [0, 0, 0, 0, 0, 0, 0, 0, 0, 0],
-      [0, 0, 0, 0, 0, 0, 0, 0, 0, 0],
-      [0, 0, 0, 0, 0, 0, 0, 0, 0, 0],
-      [0, 0, 0, 0, 0, 0, 0, 0, 0, 0],
-      [0, 0, 0, 0, 0, 0, 0, 0, 0, 0]
-    ];
-
-
   return (
     <div className="contenedor-principal">
       <div className="contenedor-titulo">
@@ -31,8 +15,8 @@ function App() {
           alt="Logo de buque" />
       </div>
       <div className="contenedor-tablas">
-          <TablaJugador tabla={tabla} />
-          <TablaCpu tabla={tabla}/>
+          <TablaJugador/>
+          <TablaCpu />
       </div>
     </div>
   );
