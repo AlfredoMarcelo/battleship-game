@@ -15,8 +15,8 @@ function App() {
           alt="Logo de buque" />
       </div>
       <div className="contenedor-tablas">
-          <TablaJugador/>
           <TablaCpu />
+          <TablaJugador/>
       </div>
     </div>
   );

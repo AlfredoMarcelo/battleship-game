@@ -6,20 +6,24 @@ function TablaJugador(){
 
   const [tableroJugador, setTableroJugador] = useState([
     [0, 0, 0, 0, 0, 0, 0, 0, 0, 0],
-    [0, 0, 0, 0, 1, 0, 0, 0, 0, 0],
-    [0, 0, 0, 0, 1, 0, 0, 0, 0, 0],
-    [0, 0, 0, 0, 1, 0, 0, 0, 0, 0],
-    [0, 0, 0, 0, 1, 0, 0, 0, 0, 0],
+    [0, 0, 0, 0, 0, 0, 0, 0, 0, 0],
+    [0, 0, 0, 0, 0, 0, 0, 0, 1, 0],
+    [0, 0, 0, 0, 0, 0, 0, 0, 1, 0],
+    [0, 0, 0, 0, 0, 0, 0, 0, 1, 0],
     [0, 0, 0, 0, 0, 0, 0, 0, 0, 0],
     [0, 0, 0, 0, 0, 0, 0, 0, 0, 0],
     [0, 0, 0, 0, 0, 0, 0, 0, 0, 0],
-    [0, 0, 0, 0, 0, 0, 0, 0, 0, 0],
+    [0, 0, 0, 0, 0, 1, 1, 0, 0, 0],
     [0, 0, 0, 0, 0, 0, 0, 0, 0, 0]
   ]);
   
   const obtenerDatoJugador = (index, index2) =>{
     let copiaTablaJugador = [...tableroJugador];
-    copiaTablaJugador[index][index2] = 3;
+    if(copiaTablaJugador[index][index2] === 0){
+      copiaTablaJugador[index][index2] = 2;
+    } else if(copiaTablaJugador[index][index2] === 1){
+      copiaTablaJugador[index][index2] = 3;
+    }
     setTableroJugador(copiaTablaJugador);
   }
 
