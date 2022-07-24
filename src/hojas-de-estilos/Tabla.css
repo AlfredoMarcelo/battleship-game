@@ -1,6 +1,7 @@
 .contenedor-recuadros{
   height: 500px;
   width: 500px;
+  padding: 3px;
   background-color: rgb(148, 147, 146);
   border: 10px solid #1b1b32;
   display: flex;

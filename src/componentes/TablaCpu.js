@@ -6,20 +6,24 @@ function TablaCpu(){
 
   const [tableroCpu, setTableroCpu] = useState([
     [0, 0, 0, 0, 0, 0, 0, 0, 0, 0],
+    [0, 0, 1, 1, 1, 1, 1, 0, 0, 0],
     [0, 0, 0, 0, 0, 0, 0, 0, 0, 0],
     [0, 0, 0, 0, 0, 0, 0, 0, 0, 0],
     [0, 0, 0, 0, 0, 0, 0, 0, 0, 0],
-    [0, 0, 0, 0, 0, 0, 0, 0, 0, 0],
-    [0, 0, 0, 0, 0, 0, 0, 0, 0, 0],
-    [0, 0, 0, 0, 0, 0, 0, 0, 0, 0],
-    [0, 0, 0, 0, 0, 0, 0, 0, 0, 0],
+    [0, 0, 1, 0, 0, 0, 0, 0, 0, 0],
+    [0, 0, 1, 0, 0, 0, 0, 0, 0, 0],
+    [0, 0, 1, 0, 0, 0, 0, 0, 0, 0],
     [0, 0, 0, 0, 0, 0, 0, 0, 0, 0],
     [0, 0, 0, 0, 0, 0, 0, 0, 0, 0]
   ]);
   
   const obtenerDatoCpu= (index, index2) =>{
     let copiaTablaCpu = [...tableroCpu];
-    copiaTablaCpu[index][index2] = 3;
+    if(copiaTablaCpu[index][index2] === 0){
+      copiaTablaCpu[index][index2] = 2;
+    } else if(copiaTablaCpu[index][index2] === 1){
+      copiaTablaCpu[index][index2] = 3;
+    }
     setTableroCpu(copiaTablaCpu);
   }
 
