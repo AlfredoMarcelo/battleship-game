@@ -2,8 +2,15 @@ import React, { useState } from 'react';
 import '../hojas-de-estilos/Tabla.css'
 import Recuadro from './Recuadro';
 
-function TablaCpu(){
+function TablaCpu({nombre}){
 
+  /* tableroCpu inicia con una matriz de valor, este es el patron para el tablero
+      -0 son los recuadros sin actividad
+      -1 son los buques
+      -2 tiros fallados
+      -3 tiros de daño a buque
+  */
+  
   const [tableroCpu, setTableroCpu] = useState([
     [0, 0, 0, 0, 0, 0, 0, 0, 0, 0],
     [0, 0, 1, 1, 1, 1, 1, 0, 0, 0],
@@ -37,9 +44,11 @@ function TablaCpu(){
   function revisarArray(){
     let copiaTablaCpu = tableroCpu;
     let contadorDeBarco = 0;
+    let nombreGanador = nombre;
     copiaTablaCpu.forEach((primerElemento)=>primerElemento.forEach((segundoElemento)=>segundoElemento === 1? contadorDeBarco += 1:''))    
     if(contadorDeBarco === 0){
-      alert("El ganor fue el Jugador");
+      console.log(nombre);
+      alert(`El ganador es ${nombreGanador}`)
       setTableroCpu([[]]);
     }
   }
@@ -52,7 +61,7 @@ function TablaCpu(){
           return(
             <>
               {arreglo.map((valorArreglo, index2)=>{
-                return <Recuadro  valor={valorArreglo} obtenerDatoCpu={()=>obtenerDatoCpu(index, index2)}/>
+                return <Recuadro key={index2} valor={valorArreglo} obtenerDatoCpu={()=>obtenerDatoCpu(index, index2)}/>
               })}
             </>
           );

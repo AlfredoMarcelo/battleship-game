@@ -14,7 +14,7 @@
 .contenedor-titulo{
   display: flex;
   flex-wrap: wrap;
-  align-items: center;/*alinear horizontalmentes*/
+  align-items: center;/*alinear vertical*/
   flex-direction: column;
   color: white;
 }
@@ -26,7 +26,47 @@
 .contenedor-tablas {
   display: flex;
   flex-wrap: wrap;
-  justify-content: space-between;
+  justify-content: space-between;/*alinear horizontalmentes*/
+}
+
+.contenedor-formulario {
+  border: 5px solid#fff;
+  border-radius: 30px;
+  margin-top: 50px;
+  width: 500px;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+.formulario {
+  width: 400px;
+  height: 200px;
+  background-color: #1b1b32;
+  border-radius: 5px 5px 0px 0px black;
+  font-size: 30px;
+  color: #fff;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+input {
+  width: 250px;
+  height: 30px;
+  font-size: 20px;
+  padding: 2px;
+}
+button {
+  width: 253px;
+  height: 30px;
+  border-radius: 20px;
+  box-shadow: 5px 5px 0px 0px rgb(87, 86, 86);
+  cursor: pointer;
+}
+
+button:hover{
+  background-color: #676665;
+  color: white;
 }
 
 

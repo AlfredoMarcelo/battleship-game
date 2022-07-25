@@ -1,3 +1,6 @@
+* {
+  user-select: none;
+}
 .recuadro.mar {
     height: 45px;
     width: 45px;
